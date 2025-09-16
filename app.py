@@ -6,41 +6,25 @@ import os
 
 import streamlit as st
 
-hide_streamlit_style = """
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-                <style>
-                div[data-testid="stToolbar"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                div[data-testid="stDecoration"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                div[data-testid="stStatusWidget"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                #MainMenu {
-                visibility: hidden;
-                height: 0%;
-                }
-                header {
-                visibility: hidden;
-                height: 0%;
-                }
-                footer {
-                visibility: hidden;
-                height: 0%;
-                }
-                </style>
-                """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+HIDE_STREAMLIT_STYLE = """
+    <style>
+    /* Hide main menu, header, footer */
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+
+    /* Hide toolbar (top-right), status widget, and decoration (Made with Streamlit) */
+    div[data-testid="stToolbar"] {visibility: hidden !important;}
+    div[data-testid="stStatusWidget"] {visibility: hidden !important;}
+    div[data-testid="stDecoration"] {visibility: hidden !important;}
+
+    /* Optional: remove extra space if footer was hidden */
+    .css-164nlkn.e1fqkh3o3 {display: none;}
+    </style>
+"""
+
+
+st.markdown(HIDE_STREAMLIT_STYLE, unsafe_allow_html=True)
 
 
 @dataclass
