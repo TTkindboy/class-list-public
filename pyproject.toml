@@ -1,0 +1,9 @@
+[project]
+name = "class-list-public"
+version = "1.0.0"
+# description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.49.1",
+]
