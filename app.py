@@ -7,6 +7,9 @@ import os
 import streamlit as st
 
 hide_streamlit_style = """
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
                 <style>
                 div[data-testid="stToolbar"] {
                 visibility: hidden;
