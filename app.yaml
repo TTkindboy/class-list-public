@@ -1,4 +1,4 @@
 runtime: python312
-env: flexzzx
+env: standard
 
 entrypoint: streamlit run app.py --server.port $PORT
