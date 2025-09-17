@@ -1,7 +1,4 @@
-runtime: python
-env: flex
-
-runtime_config:
-  python_version: 3.12
+runtime: python312
+env: flexzzx
 
 entrypoint: streamlit run app.py --server.port $PORT
