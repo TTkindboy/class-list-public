@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r  requirements.txt
 ENV PORT=
 
 COPY app.py .
-COPY classes.pkl
-COPY favicon.ico
+COPY classes.pkl . 
+COPY favicon.ico .
 
 CMD streamlit run app.py --server.port=${PORT}  --browser.serverAddress="0.0.0.0"
