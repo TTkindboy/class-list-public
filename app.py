@@ -6,6 +6,10 @@ import os
 
 import streamlit as st
 
+
+st.markdown('<meta name="robots" content="noindex, nofollow">',unsafe_allow_html=True)
+
+
 hide_streamlit_style = """
             <style>
             [data-testid="stToolbar"] {visibility: hidden !important;}
